@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Analizador Léxico con FLEX</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>🔍 Analizador Léxico</h1>
+            <p>Compiladores - Análisis Léxico con FLEX</p>
+            <p style="font-size: 0.9em; opacity: 0.8;">✨ Powered by FLEX + Python + JavaScript</p>
+        </div>
+        
+        <div class="controls">
+            <button class="btn btn-primary" onclick="analizar()">▶ Analizar con FLEX</button>
+            <button class="btn btn-secondary" onclick="limpiar()">🗑 Limpiar</button>
+            <button class="btn btn-example" onclick="cargarEjemplo(1)">Ejemplo 1</button>
+            <button class="btn btn-example" onclick="cargarEjemplo(2)">Ejemplo 2</button>
+            <button class="btn btn-example" onclick="cargarEjemplo(3)">Ejemplo 3</button>
+        </div>
+        
+        <div class="main-content">
+            <div class="panel">
+                <div class="panel-header">📝 Código Fuente</div>
+                <div class="panel-body" style="padding: 0;">
+                    <textarea id="codigo" placeholder="Escribe tu código aquí..."></textarea>
+                </div>
+            </div>
+            
+            <div class="panel">
+                <div class="panel-header">📊 Tokens Identificados (FLEX)</div>
+                <div class="panel-body" style="padding: 0;">
+                    <div class="tokens-container">
+                        <table id="tokens-table">
+                            <thead>
+                                <tr>
+                                    <th>Tipo</th>
+                                    <th>Lexema</th>
+                                    <th>Línea</th>
+                                    <th>Columna</th>
+                                </tr>
+                            </thead>
+                            <tbody id="tokens-body">
+                                <tr>
+                                    <td colspan="4" style="text-align: center; color: #999; padding: 40px;">
+                                        Escribe código y presiona "Analizar"
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="status-bar" id="status">
+            Listo - Presiona F5 o click en "Analizar con FLEX"
+        </div>
+    </div>
+    
+    <script src="js/lexer.js"></script>
+</body>
+</html>

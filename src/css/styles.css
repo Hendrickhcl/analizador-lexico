@@ -1,0 +1,165 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.container {
+    max-width: 1400px;
+    margin: 0 auto;
+    background: white;
+    border-radius: 20px;
+    box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+    overflow: hidden;
+}
+
+.header {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    padding: 30px;
+    text-align: center;
+}
+
+.header h1 {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+}
+
+.header p {
+    opacity: 0.9;
+    font-size: 1.1em;
+}
+
+.controls {
+    padding: 20px;
+    background: #f8f9fa;
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.btn {
+    padding: 12px 24px;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.btn-primary {
+    background: #4CAF50;
+    color: white;
+}
+
+.btn-primary:hover {
+    background: #45a049;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(76, 175, 80, 0.4);
+}
+
+.btn-secondary {
+    background: #f44336;
+    color: white;
+}
+
+.btn-secondary:hover {
+    background: #da190b;
+}
+
+.btn-example {
+    background: #2196F3;
+    color: white;
+}
+
+.btn-example:hover {
+    background: #0b7dda;
+}
+
+.main-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    padding: 20px;
+}
+
+.panel {
+    border: 2px solid #e0e0e0;
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+.panel-header {
+    background: #667eea;
+    color: white;
+    padding: 15px;
+    font-weight: bold;
+    font-size: 1.1em;
+}
+
+.panel-body {
+    padding: 15px;
+}
+
+#codigo {
+    width: 100%;
+    height: 500px;
+    font-family: 'Courier New', monospace;
+    font-size: 14px;
+    padding: 15px;
+    border: none;
+    background: #1e1e1e;
+    color: #d4d4d4;
+    resize: none;
+}
+
+#tokens-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 14px;
+}
+
+#tokens-table th {
+    background: #667eea;
+    color: white;
+    padding: 12px;
+    text-align: left;
+    position: sticky;
+    top: 0;
+}
+
+#tokens-table td {
+    padding: 10px;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+#tokens-table tr:hover {
+    background: #f5f5f5;
+}
+
+.tokens-container {
+    max-height: 500px;
+    overflow-y: auto;
+}
+
+.status-bar {
+    background: #1e1e1e;
+    color: #4CAF50;
+    padding: 12px 20px;
+    font-family: monospace;
+}
+
+@media (max-width: 768px) {
+    .main-content {
+        grid-template-columns: 1fr;
+    }
+}

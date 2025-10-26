@@ -1,63 +1,33 @@
-# 🔍 Analizador Léxico
+cat >> README.md << 'ENDREADME'
 
-Analizador léxico implementado con **FLEX**.
+## Clonar el Proyecto
+```bash
+git clone https://github.com/Hendrickhcl/analizador-lexico.git
+cd analizador-lexico
+```
 
-## 🚀 Inicio Rápido
+## Instalación de Dependencias
 
-### Compilar
+### Arch Linux
+```bash
+sudo pacman -S flex gcc python python-flask python-flask-cors
+```
+## Uso
+
+### Opción 1: Terminal
 ```bash
 flex -o src/lex.yy.c src/lexer.l
 gcc src/lex.yy.c -o bin/lexer
-```
-
-### Usar desde Terminal
-```bash
 echo 'int x = 10;' | ./bin/lexer
 ```
 
-### Usar con Interfaz Web
+### Opción 2: Interfaz Web (Recomendado)
 ```bash
 # Instalar dependencias
 sudo pacman -S python-flask python-flask-cors
 
 # Iniciar servidor
-python3 web/server.py
+python web/server.py
 
-# Abrir navegador o tu navegador de preferencia
-firefox http://localhost:5000
+# Abre http://localhost:5000 en tu navegador
 ```
-
-## 📁 Estructura
-```
-├── src/
-│   └── lexer.l              # Analizador FLEX
-├── bin/
-│   └── lexer                # Ejecutable compilado
-├── web/
-│   ├── index.html           # Interfaz web
-│   ├── css/styles.css       # Estilos
-│   ├── js/lexer.js          # Frontend
-│   └── server.py            # Backend Flask
-└── examples/
-    └── test.txt             # Código de ejemplo
-```
-
-##  Características
-
-- ✅ Reconoce 18+ tipos de tokens
-- ✅ Palabras reservadas: if, else, while, for, return...
-- ✅ Tipos de datos: int, float, string, bool
-- ✅ Operadores: aritméticos, relacionales, lógicos
-- ✅ Números enteros y reales
-- ✅ Cadenas de texto
-- ✅ Comentarios (`//`)
-- ✅ Salida en formato JSON
-
-
-##  Tecnologías
-
-- **FLEX** - Generador de analizadores léxicos
-- **C/GCC** - Compilación del lexer
-- **Python/Flask** - Servidor backend
-- **HTML/CSS/JavaScript** - Interfaz web
-
